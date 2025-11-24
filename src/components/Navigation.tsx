@@ -34,7 +34,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button variant="hero" size="lg" className="ml-4">
-              Book a Demo
+              Schedule a Consultation
             </Button>
           </div>
 
@@ -63,7 +63,7 @@ const Navigation = () => {
             ))}
             <div className="px-4 pt-2">
               <Button variant="hero" size="lg" className="w-full">
-                Book a Demo
+                Schedule a Consultation
               </Button>
             </div>
           </div>
