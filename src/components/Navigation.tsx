@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import flinnLogo from "@/assets/flinn-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-accent rounded-lg" />
+            <img src={flinnLogo} alt="Flinn Technologies" className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg" />
             <span className="text-xl lg:text-2xl font-bold text-foreground">Flinn Technologies</span>
           </a>
 

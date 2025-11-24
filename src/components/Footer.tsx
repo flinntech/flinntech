@@ -1,4 +1,5 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
+import flinnLogo from "@/assets/flinn-logo.png";
 const Footer = () => {
   const footerLinks = {
     Solutions: ["Custom AI Development", "AI Strategy", "Enterprise Infrastructure", "AI Training"],
@@ -13,7 +14,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-accent rounded-lg" />
+              <img src={flinnLogo} alt="Flinn Technologies" className="w-8 h-8 rounded-lg" />
               <span className="text-xl font-bold">Flinn Technologies</span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-4">
