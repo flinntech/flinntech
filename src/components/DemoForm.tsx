@@ -17,8 +17,8 @@ const DemoForm = () => {
     setTimeout(() => {
       setIsSubmitted(true);
       toast({
-        title: "Demo Request Received!",
-        description: "We'll be in touch within 24 hours to schedule your custom demo.",
+        title: "Consultation Request Received!",
+        description: "We'll be in touch within 24 hours to schedule your consultation.",
       });
     }, 500);
   };
@@ -35,7 +35,7 @@ const DemoForm = () => {
               Thank You!
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Your demo request has been received. Our team will reach out within 24 hours to schedule your personalized AI consultation.
+              Your consultation request has been received. Our team will reach out within 24 hours to schedule your personalized AI consultation.
             </p>
             <Button variant="outline" onClick={() => setIsSubmitted(false)}>
               Submit Another Request
@@ -54,16 +54,16 @@ const DemoForm = () => {
             {/* Left Column - Info */}
             <div className="space-y-6">
               <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-                See Flinn AI in Action
+                Schedule Your Free Consultation
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Schedule a personalized demo to discover how our custom AI solutions can transform your business operations and drive measurable results.
+                Book a personalized consultation to discover how our custom AI solutions can transform your business operations and drive measurable results.
               </p>
               
-              <ul className="space-y-4">
+               <ul className="space-y-4">
                 {[
-                  "Custom demo tailored to your industry",
-                  "Live AI capabilities showcase",
+                  "Consultation tailored to your industry",
+                  "AI capabilities and solutions review",
                   "ROI analysis and use case discussion",
                   "Q&A with our AI experts",
                 ].map((item, idx) => (
@@ -122,7 +122,7 @@ const DemoForm = () => {
                 </div>
 
                 <Button type="submit" variant="cta" size="lg" className="w-full group">
-                  Request Custom Demo
+                  Schedule Consultation
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
 
