@@ -1,15 +1,12 @@
 import { Github, Linkedin, Twitter } from "lucide-react";
-
 const Footer = () => {
   const footerLinks = {
     Solutions: ["Custom AI Development", "AI Strategy", "Enterprise Infrastructure", "AI Training"],
     Company: ["About Us", "Careers", "Partners", "Contact"],
     Resources: ["Case Studies", "Blog", "Documentation", "Webinars"],
-    Legal: ["Privacy Policy", "Terms of Service", "Security", "Compliance"],
+    Legal: ["Privacy Policy", "Terms of Service", "Security", "Compliance"]
   };
-
-  return (
-    <footer className="bg-primary text-primary-foreground py-16">
+  return <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Main Footer Content */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
@@ -36,29 +33,22 @@ const Footer = () => {
           </div>
 
           {/* Link Columns */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
+          {Object.entries(footerLinks).map(([category, links]) => <div key={category}>
               <h3 className="font-semibold mb-4">{category}</h3>
               <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <a 
-                      href="#" 
-                      className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
-                    >
+                {links.map(link => <li key={link}>
+                    <a href="#" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                       {link}
                     </a>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
-            <p>© 2024 Flinn Technologies. All rights reserved.</p>
+            <p>© 2024 Flinn Technologies LLC. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-primary-foreground transition-colors">Privacy</a>
               <a href="#" className="hover:text-primary-foreground transition-colors">Terms</a>
@@ -67,8 +57,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
