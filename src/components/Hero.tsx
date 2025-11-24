@@ -36,9 +36,9 @@ const Hero = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-balance leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white text-balance leading-[1.15]">
             Transform Your Business with
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-bright to-secondary mt-2">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-bright to-secondary mt-2 pb-2">
               Intelligent AI Systems
             </span>
           </h1>
