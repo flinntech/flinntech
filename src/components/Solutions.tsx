@@ -6,21 +6,21 @@ import securityIcon from "@/assets/security-icon.png";
 const solutions = [
   {
     icon: aiSolutionsIcon,
-    title: "Custom AI Development",
-    description: "Tailored AI solutions designed specifically for your business needs, from intelligent automation to predictive analytics.",
-    features: ["Machine Learning Models", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+    title: "Intelligent AI Agents",
+    description: "Autonomous AI agents that handle complex tasks, engage customers, and make decisions - working 24/7 to scale your operations without scaling headcount.",
+    features: ["Conversational AI & Chatbots", "Task Automation Agents", "Decision-Making Assistants", "Multi-Agent Orchestration"],
   },
   {
     icon: analyticsIcon,
-    title: "AI Strategy & Consulting",
-    description: "Strategic guidance to identify high-impact AI opportunities and create a roadmap for successful implementation.",
-    features: ["AI Readiness Assessment", "Use Case Identification", "ROI Analysis", "Implementation Roadmap"],
+    title: "AI-Powered Applications",
+    description: "Custom applications with embedded AI capabilities that transform how your team works - from intelligent document processing to smart recommendations.",
+    features: ["Document Intelligence", "Smart Search & Discovery", "Recommendation Engines", "Predictive Insights"],
   },
   {
     icon: securityIcon,
-    title: "Enterprise AI Infrastructure",
-    description: "Secure, scalable AI infrastructure that integrates seamlessly with your existing systems and workflows.",
-    features: ["Cloud & On-Premise", "API Integration", "Security & Compliance", "Continuous Monitoring"],
+    title: "Automation Workflows",
+    description: "End-to-end workflow automation that connects your tools, eliminates manual tasks, and ensures consistent execution across your organization.",
+    features: ["Process Automation", "System Integrations", "Trigger-Based Actions", "Real-Time Monitoring"],
   },
 ];
 
@@ -31,10 +31,10 @@ const Solutions = () => {
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            AI Solutions That Drive Results
+            AI That Works For You
           </h2>
           <p className="text-xl text-muted-foreground">
-            Comprehensive AI services designed to accelerate your digital transformation and deliver measurable business impact.
+            Practical AI solutions that deliver immediate business value - from intelligent agents to automated workflows.
           </p>
         </div>
 
