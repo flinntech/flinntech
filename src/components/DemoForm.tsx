@@ -5,22 +5,59 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const DemoForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    // Simulate form submission
-    setTimeout(() => {
+    setIsLoading(true);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      company: formData.get("company") as string,
+      message: formData.get("message") as string || null,
+    };
+
+    try {
+      // Store in database
+      const { error: dbError } = await supabase
+        .from("consultation_requests")
+        .insert([data]);
+
+      if (dbError) throw dbError;
+
+      // Send email notification
+      const { error: emailError } = await supabase.functions.invoke(
+        "send-consultation-email",
+        { body: data }
+      );
+
+      if (emailError) {
+        console.error("Email error:", emailError);
+        // Don't throw - we still want to show success if DB insert worked
+      }
+
       setIsSubmitted(true);
       toast({
         title: "Consultation Request Received!",
         description: "We'll be in touch within 24 hours to schedule your consultation.",
       });
-    }, 500);
+    } catch (error: any) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or contact us directly at consulting@flinntech.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   if (isSubmitted) {
@@ -83,47 +120,61 @@ const DemoForm = () => {
                 <div className="space-y-2">
                   <Label htmlFor="name">Full Name *</Label>
                   <Input 
-                    id="name" 
+                    id="name"
+                    name="name"
                     placeholder="John Doe" 
                     required 
                     className="h-12"
+                    disabled={isLoading}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="email">Work Email *</Label>
                   <Input 
-                    id="email" 
+                    id="email"
+                    name="email"
                     type="email" 
                     placeholder="john@company.com" 
                     required 
                     className="h-12"
+                    disabled={isLoading}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="company">Company Name *</Label>
                   <Input 
-                    id="company" 
+                    id="company"
+                    name="company"
                     placeholder="Acme Corp" 
                     required 
                     className="h-12"
+                    disabled={isLoading}
                   />
                 </div>
 
                 <div className="space-y-2">
                   <Label htmlFor="message">Tell us about your AI needs</Label>
                   <Textarea 
-                    id="message" 
+                    id="message"
+                    name="message"
                     placeholder="What challenges are you looking to solve with AI?"
                     rows={4}
                     className="resize-none"
+                    disabled={isLoading}
                   />
                 </div>
 
-                <Button type="submit" variant="cta" size="lg" className="w-full group">
-                  Schedule Consultation
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <Button 
+                  type="submit" 
+                  variant="cta" 
+                  size="lg" 
+                  className="w-full group"
+                  disabled={isLoading}
+                >
+                  {isLoading ? "Submitting..." : "Schedule Consultation"}
+                  {!isLoading && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                 </Button>
 
                 <p className="text-xs text-muted-foreground text-center">
