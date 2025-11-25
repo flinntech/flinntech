@@ -117,14 +117,6 @@ const Index = () => {
                 "@type": "Answer",
                 "text": "Yes, our AI solutions are designed to integrate seamlessly with your existing tools and platforms including CRM systems, databases, communication tools, and business applications. We support API integrations, webhooks, and custom connectors to ensure smooth data flow."
               }
-            },
-            {
-              "@type": "Question",
-              "name": "What kind of support do you provide after deployment?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We provide comprehensive post-deployment support including system monitoring, performance optimization, regular updates, and technical assistance. Our support packages range from business hours coverage to 24/7 dedicated support based on your requirements."
-              }
             }
           ]
         },
