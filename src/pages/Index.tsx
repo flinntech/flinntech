@@ -30,6 +30,35 @@ const Index = () => {
           }
         },
         {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://yourdomain.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "AI Solutions",
+              "item": "https://yourdomain.com/#solutions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Portfolio",
+              "item": "https://yourdomain.com/#portfolio"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Contact",
+              "item": "https://yourdomain.com/#demo"
+            }
+          ]
+        },
+        {
           "@type": "Service",
           "serviceType": "Intelligent AI Agents",
           "provider": {
@@ -162,7 +191,7 @@ const Index = () => {
           }
         }
       ]
-    };
+    }
 
     // Create and insert script tag
     const script = document.createElement("script");
