@@ -50,9 +50,6 @@ const Hero = () => {
               Schedule a Consultation
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl" className="bg-white/10 border-white/20 text-white hover:bg-white/20">
-              Request AI Assessment
-            </Button>
           </div>
 
           {/* Trust Indicators */}
