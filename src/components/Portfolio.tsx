@@ -76,66 +76,65 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Project Cards */}
-        <div className="max-w-6xl mx-auto space-y-8">
+        {/* Project Cards - Horizontal Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
               <Card 
                 key={project.id}
-                className="group hover:shadow-xl transition-all duration-300 bg-card border-border relative overflow-hidden"
+                className="group hover:shadow-xl transition-all duration-300 bg-card border-border relative overflow-hidden flex flex-col"
               >
                 {/* Accent Bar */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-accent" />
 
-                <CardHeader className="space-y-4">
+                <CardHeader className="space-y-3 pb-4">
                   {/* Icon & Title */}
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-accent/10 flex-shrink-0">
-                      <Icon className="w-8 h-8 text-accent" />
+                  <div className="flex items-start gap-3">
+                    <div className="p-2 rounded-lg bg-accent/10 flex-shrink-0">
+                      <Icon className="w-6 h-6 text-accent" />
                     </div>
-                    <div className="flex-1">
-                      <CardTitle className="text-2xl md:text-3xl mb-3">{project.name}</CardTitle>
-                      {/* Industry Tags */}
-                      <div className="flex flex-wrap gap-2">
-                        {project.industries.map((industry) => (
-                          <Badge key={industry} variant="secondary" className="text-xs">
-                            {industry}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
+                    <CardTitle className="text-lg md:text-xl leading-tight">{project.name}</CardTitle>
+                  </div>
+                  
+                  {/* Industry Tags - Show max 2 */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.industries.slice(0, 2).map((industry) => (
+                      <Badge key={industry} variant="secondary" className="text-xs px-2 py-0.5">
+                        {industry}
+                      </Badge>
+                    ))}
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-6">
-                  {/* The Goal */}
+                <CardContent className="space-y-4 flex-1 flex flex-col pt-0">
+                  {/* The Goal - Truncated */}
                   <div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2">The Goal</h4>
-                    <p className="text-muted-foreground leading-relaxed">{project.goal}</p>
+                    <h4 className="text-base font-semibold text-foreground mb-1.5">The Goal</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">{project.goal}</p>
                   </div>
 
                   {/* Expandable Details */}
-                  <Accordion type="single" collapsible className="w-full">
+                  <Accordion type="single" collapsible className="w-full mt-auto">
                     <AccordionItem value="details" className="border-border">
-                      <AccordionTrigger className="text-lg font-semibold text-foreground hover:text-accent">
-                        View Project Details
+                      <AccordionTrigger className="text-base font-semibold text-foreground hover:text-accent py-3">
+                        View Details
                       </AccordionTrigger>
-                      <AccordionContent className="space-y-6 pt-4">
+                      <AccordionContent className="space-y-4 pt-3">
                         {/* The Challenge */}
                         <div>
-                          <h4 className="text-lg font-semibold text-foreground mb-2">The Challenge</h4>
-                          <p className="text-muted-foreground leading-relaxed">{project.challenge}</p>
+                          <h4 className="text-base font-semibold text-foreground mb-1.5">The Challenge</h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{project.challenge}</p>
                         </div>
 
                         {/* The Solution */}
                         <div>
-                          <h4 className="text-lg font-semibold text-foreground mb-2">The Solution</h4>
-                          <p className="text-muted-foreground leading-relaxed mb-4">{project.solution.description}</p>
-                          <ul className="space-y-3">
+                          <h4 className="text-base font-semibold text-foreground mb-1.5">The Solution</h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed mb-3">{project.solution.description}</p>
+                          <ul className="space-y-2">
                             {project.solution.agents.map((agent) => (
-                              <li key={agent.name} className="flex gap-3">
-                                <span className="text-accent font-medium mt-1 flex-shrink-0">•</span>
+                              <li key={agent.name} className="flex gap-2 text-sm">
+                                <span className="text-accent font-medium mt-0.5 flex-shrink-0">•</span>
                                 <div>
                                   <span className="font-semibold text-foreground">{agent.name}:</span>
                                   <span className="text-muted-foreground"> {agent.description}</span>
@@ -147,24 +146,24 @@ const Portfolio = () => {
 
                         {/* Key Technologies */}
                         <div>
-                          <h4 className="text-lg font-semibold text-foreground mb-3">Key Technologies</h4>
-                          <div className="flex flex-wrap gap-2">
+                          <h4 className="text-base font-semibold text-foreground mb-2">Key Technologies</h4>
+                          <div className="flex flex-wrap gap-1.5">
                             {project.technologies.map((tech) => (
-                              <Badge key={tech} variant="outline" className="bg-accent/5 border-accent/20">
+                              <Badge key={tech} variant="outline" className="bg-accent/5 border-accent/20 text-xs px-2 py-0.5">
                                 {tech}
                               </Badge>
                             ))}
                           </div>
                         </div>
+
+                        {/* Outcome - Inside Accordion */}
+                        <div className="pt-3 border-t border-border">
+                          <h4 className="text-base font-semibold text-foreground mb-1.5">Outcome</h4>
+                          <p className="text-sm text-accent font-medium leading-relaxed">{project.outcome}</p>
+                        </div>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
-
-                  {/* Outcome - Always Visible */}
-                  <div className="pt-4 border-t border-border">
-                    <h4 className="text-lg font-semibold text-foreground mb-2">Outcome</h4>
-                    <p className="text-accent font-medium leading-relaxed">{project.outcome}</p>
-                  </div>
                 </CardContent>
               </Card>
             );
