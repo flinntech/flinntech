@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Solutions from "@/components/Solutions";
 import Portfolio from "@/components/Portfolio";
+import AboutFounder from "@/components/AboutFounder";
 import FAQ from "@/components/FAQ";
 import DemoForm from "@/components/DemoForm";
 import Footer from "@/components/Footer";
@@ -275,6 +276,7 @@ const Index = () => {
       <Hero />
       <Solutions />
       <Portfolio />
+      <AboutFounder />
       <FAQ />
       <DemoForm />
       <Footer />
