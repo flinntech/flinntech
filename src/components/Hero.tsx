@@ -1,29 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
-
 const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <div className="absolute inset-0 z-0" style={{
+      backgroundImage: `url(${heroBg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <div className="absolute inset-0 bg-gradient-to-b from-primary/95 via-primary/90 to-background" />
       </div>
 
       {/* Animated Grid Pattern */}
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute inset-0" style={{
-          backgroundImage: `linear-gradient(hsl(var(--accent)) 1px, transparent 1px),
+        backgroundImage: `linear-gradient(hsl(var(--accent)) 1px, transparent 1px),
                            linear-gradient(90deg, hsl(var(--accent)) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px',
-        }} />
+        backgroundSize: '50px 50px'
+      }} />
       </div>
 
       {/* Content */}
@@ -61,27 +56,12 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap items-center justify-center gap-8 pt-8 text-white/70 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span>SOC 2 Type II Certified</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span>GDPR Compliant</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span>Enterprise-Grade Security</span>
-            </div>
-          </div>
+          
         </div>
       </div>
 
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent z-10" />
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
