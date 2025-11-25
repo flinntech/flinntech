@@ -2,6 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Solutions from "@/components/Solutions";
 import Portfolio from "@/components/Portfolio";
+import FAQ from "@/components/FAQ";
 import DemoForm from "@/components/DemoForm";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
@@ -282,6 +283,7 @@ const Index = () => {
       <Hero />
       <Solutions />
       <Portfolio />
+      <FAQ />
       <DemoForm />
       <Footer />
     </div>
