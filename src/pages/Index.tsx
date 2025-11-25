@@ -27,7 +27,7 @@ const Index = () => {
           "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "Business Inquiries",
-            "email": "contact@yourdomain.com"
+            "email": "contact@flinntech.com"
           }
         },
         {
