@@ -1,4 +1,3 @@
-import { Github, Linkedin } from "lucide-react";
 import flinnLogo from "@/assets/flinn-logo.png";
 
 const Footer = () => {
@@ -17,32 +16,14 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex gap-3">
-            <a 
-              href="#" 
-              className="w-9 h-9 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-4 h-4" />
-            </a>
-            <a 
-              href="#" 
-              className="w-9 h-9 rounded-lg bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="w-4 h-4" />
-            </a>
-          </div>
-
           {/* Bottom Bar */}
           <div className="pt-6 border-t border-primary-foreground/10 w-full">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm text-primary-foreground/60">
               <p>© 2025 Flinn Technologies LLC. All rights reserved.</p>
               <div className="flex gap-6">
-                <a href="#" className="hover:text-primary-foreground transition-colors">Privacy</a>
+                <a href="/privacy" className="hover:text-primary-foreground transition-colors">Privacy</a>
                 <span className="text-primary-foreground/40">·</span>
-                <a href="#" className="hover:text-primary-foreground transition-colors">Terms</a>
+                <a href="/terms" className="hover:text-primary-foreground transition-colors">Terms</a>
               </div>
             </div>
           </div>
