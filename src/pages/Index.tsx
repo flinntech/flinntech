@@ -16,7 +16,7 @@ const Index = () => {
       "@graph": [
         {
           "@type": "Organization",
-          "name": "Flinn AI Solutions",
+          "name": "Flinn Technologies",
           "url": "https://flinntech.com",
           "logo": "https://flinntech.com/logo.png",
           "description": "We design, build, and deploy custom AI solutions that drive measurable business outcomes. From strategy to implementation, we're your trusted partner in AI transformation.",
@@ -126,7 +126,7 @@ const Index = () => {
           "serviceType": "Intelligent AI Agents",
           "provider": {
             "@type": "Organization",
-            "name": "Flinn AI Solutions"
+            "name": "Flinn Technologies"
           },
           "description": "Autonomous AI agents that handle complex tasks, engage customers, and make decisions - working 24/7 to scale your operations without scaling headcount.",
           "areaServed": "Worldwide",
@@ -170,7 +170,7 @@ const Index = () => {
           "serviceType": "AI-Powered Applications",
           "provider": {
             "@type": "Organization",
-            "name": "Flinn AI Solutions"
+            "name": "Flinn Technologies"
           },
           "description": "Custom applications with embedded AI capabilities that transform how your team works - from intelligent document processing to smart recommendations.",
           "areaServed": "Worldwide",
@@ -214,7 +214,7 @@ const Index = () => {
           "serviceType": "Automation Workflows",
           "provider": {
             "@type": "Organization",
-            "name": "Flinn AI Solutions"
+            "name": "Flinn Technologies"
           },
           "description": "End-to-end workflow automation that connects your tools, eliminates manual tasks, and ensures consistent execution across your organization.",
           "areaServed": "Worldwide",
