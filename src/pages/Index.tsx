@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Solutions from "@/components/Solutions";
-import Proof from "@/components/Proof";
+import Portfolio from "@/components/Portfolio";
 import DemoForm from "@/components/DemoForm";
 import Footer from "@/components/Footer";
 
@@ -11,7 +11,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Solutions />
-      <Proof />
+      <Portfolio />
       <DemoForm />
       <Footer />
     </div>
