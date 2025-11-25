@@ -99,7 +99,7 @@ const Index = () => {
               "name": "What industries do you serve?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "We serve businesses across multiple industries including healthcare, finance, e-commerce, manufacturing, and professional services. Our AI solutions are customized to address industry-specific challenges and regulatory requirements."
+                "text": "We work with businesses across all industries. From healthcare and finance to e-commerce, manufacturing, professional services, and beyond - our AI solutions are customized to address your specific industry challenges and regulatory requirements, regardless of your sector."
               }
             },
             {
