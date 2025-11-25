@@ -16,8 +16,8 @@ const Index = () => {
         {
           "@type": "Organization",
           "name": "Flinn AI Solutions",
-          "url": "https://yourdomain.com",
-          "logo": "https://yourdomain.com/logo.png",
+          "url": "https://flinntech.com",
+          "logo": "https://flinntech.com/logo.png",
           "description": "We design, build, and deploy custom AI solutions that drive measurable business outcomes. From strategy to implementation, we're your trusted partner in AI transformation.",
           "address": {
             "@type": "PostalAddress",
@@ -37,25 +37,25 @@ const Index = () => {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://yourdomain.com/"
+              "item": "https://flinntech.com/"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "AI Solutions",
-              "item": "https://yourdomain.com/#solutions"
+              "item": "https://flinntech.com/#solutions"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Portfolio",
-              "item": "https://yourdomain.com/#portfolio"
+              "item": "https://flinntech.com/#portfolio"
             },
             {
               "@type": "ListItem",
               "position": 4,
               "name": "Contact",
-              "item": "https://yourdomain.com/#demo"
+              "item": "https://flinntech.com/#demo"
             }
           ]
         },
