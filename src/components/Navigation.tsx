@@ -9,6 +9,7 @@ const Navigation = () => {
   const navItems = [
     { label: "Solutions", href: "#solutions" },
     { label: "Portfolio", href: "#portfolio" },
+    { label: "FAQ", href: "#faq" },
   ];
 
   return (
