@@ -1,14 +1,11 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
-
 const Terms = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
       
       {/* Hero Section */}
@@ -17,9 +14,7 @@ const Terms = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-4">
             Terms of Service
           </h1>
-          <p className="text-xl text-primary-foreground/80">
-            Last updated: January 2025
-          </p>
+          <p className="text-xl text-primary-foreground/80">Last updated: November 2025</p>
         </div>
       </section>
 
@@ -118,8 +113,6 @@ const Terms = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Terms;
