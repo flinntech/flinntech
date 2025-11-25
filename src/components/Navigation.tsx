@@ -32,8 +32,8 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
-            <Button variant="hero" size="lg" className="ml-4">
-              Schedule a Consultation
+            <Button variant="hero" size="lg" className="ml-4" asChild>
+              <a href="#demo">Schedule a Consultation</a>
             </Button>
           </div>
 
@@ -61,8 +61,8 @@ const Navigation = () => {
               </a>
             ))}
             <div className="px-4 pt-2">
-              <Button variant="hero" size="lg" className="w-full">
-                Schedule a Consultation
+              <Button variant="hero" size="lg" className="w-full" asChild>
+                <a href="#demo">Schedule a Consultation</a>
               </Button>
             </div>
           </div>
