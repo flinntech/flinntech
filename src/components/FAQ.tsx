@@ -33,10 +33,6 @@ const faqs = [
   {
     question: "Can AI agents integrate with our existing software?",
     answer: "Yes, our AI solutions are designed to integrate seamlessly with your existing tools and platforms including CRM systems, databases, communication tools, and business applications. We support API integrations, webhooks, and custom connectors to ensure smooth data flow."
-  },
-  {
-    question: "What kind of support do you provide after deployment?",
-    answer: "We provide comprehensive post-deployment support including system monitoring, performance optimization, regular updates, and technical assistance. Our support packages range from business hours coverage to 24/7 dedicated support based on your requirements."
   }
 ];
 
