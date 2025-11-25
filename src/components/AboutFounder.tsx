@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import founderPlaceholder from "@/assets/founder-placeholder.jpg";
+import founderPhoto from "@/assets/founder-photo.jpg";
 
 const AboutFounder = () => {
   const scrollToDemo = () => {
@@ -29,7 +29,7 @@ const AboutFounder = () => {
                 <div className="relative bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center p-8 md:p-12">
                   <div className="relative w-48 h-48 md:w-full md:h-auto md:aspect-square">
                     <img
-                      src={founderPlaceholder}
+                      src={founderPhoto}
                       alt="Founder portrait"
                       className="w-full h-full object-cover rounded-2xl shadow-lg"
                     />
