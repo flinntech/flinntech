@@ -32,14 +32,14 @@ const DemoForm = () => {
 
       if (dbError) throw dbError;
 
-      // Send emails and Zapier notification via edge function
+      // Send Zapier notification via edge function
       try {
-        const { error: emailError } = await supabase.functions.invoke('send-consultation-email', {
+        const { error: zapierError } = await supabase.functions.invoke('send-consultation-email', {
           body: data
         });
         
-        if (emailError) {
-          console.error("Email/Zapier notification error:", emailError);
+        if (zapierError) {
+          console.error("Zapier notification error:", zapierError);
         }
       } catch (functionError) {
         console.error("Edge function error:", functionError);
