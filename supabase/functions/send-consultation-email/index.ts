@@ -89,6 +89,27 @@ const handler = async (req: Request): Promise<Response> => {
 
     console.log("Emails sent successfully:", { notificationEmail, confirmationEmail });
 
+    // Send data to Zapier webhook
+    try {
+      const zapierResponse = await fetch("https://hooks.zapier.com/hooks/catch/25498237/uzjar8p/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          company,
+          message: message || "",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+      console.log("Zapier webhook called, status:", zapierResponse.status);
+    } catch (zapierError) {
+      console.error("Zapier webhook error:", zapierError);
+      // Don't fail the entire request if Zapier fails
+    }
+
     return new Response(
       JSON.stringify({ 
         success: true,
