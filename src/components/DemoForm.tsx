@@ -32,20 +32,17 @@ const DemoForm = () => {
 
       if (dbError) throw dbError;
 
-      // Send webhook notification to Zapier
+      // Send emails and Zapier notification via edge function
       try {
-        await fetch("https://hooks.zapier.com/hooks/catch/25498237/uzjar8p/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ...data,
-            timestamp: new Date().toISOString(),
-          }),
+        const { error: emailError } = await supabase.functions.invoke('send-consultation-email', {
+          body: data
         });
-      } catch (webhookError) {
-        console.error("Webhook error:", webhookError);
+        
+        if (emailError) {
+          console.error("Email/Zapier notification error:", emailError);
+        }
+      } catch (functionError) {
+        console.error("Edge function error:", functionError);
         // Don't throw - we still want to show success if DB insert worked
       }
 
