@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Search, Gamepad2, Server } from "lucide-react";
+import { Search, Gamepad2 } from "lucide-react";
 
 const projects = [
   {
@@ -39,27 +39,28 @@ const projects = [
     },
     technologies: ["Context Engineering", "Full-Stack Development", "Campaign Memory System"],
     outcome: "A specialized AI product that solves a specific niche problem using advanced context management, demonstrating my ability to build user-facing AI products, not just backend scripts."
-  },
-  {
-    id: "aiops-system",
-    name: "Enterprise AIOps Multi-Agent System",
-    industries: ["IoT", "Cloud Computing", "DevOps/AIOps"],
-    icon: Server,
-    goal: "To automate the full lifecycle of network operations—from detection to remediation—for a large-scale industrial IoT infrastructure.",
-    challenge: "A single AI model cannot simultaneously handle real-time alerting, deep-dive troubleshooting, and predictive analytics without losing context or hallucinating. The system required a team of specialized experts, not a generalist chatbot.",
-    solution: {
-      description: "I architected a complex Multi-Agent System using TypeScript and the Model Context Protocol (MCP). This system utilizes a hierarchical 'Swarm' architecture where a Supervisor Agent orchestrates five specialized sub-agents:",
-      agents: [
-        { name: "Troubleshooting Agent", description: "Investigates error logs and diagnostics to root-cause device failures." },
-        { name: "Management Agent", description: "Executes configuration updates and firmware patches via secure API tools." },
-        { name: "Analytics Agent", description: "Aggregates network health metrics to report on uptime and signal quality." },
-        { name: "Alerting Agent", description: "Monitors real-time streams to escalate critical incidents to human staff." },
-        { name: "AIOps Agent", description: "Uses predictive logic to identify anomalies before they become outages." }
-      ]
-    },
-    technologies: ["TypeScript", "Model Context Protocol", "Hierarchical Swarm Architecture", "Custom MCP Server"],
-    outcome: "A fully autonomous operations team in software form, capable of resolving Tier-1 network issues without human intervention."
   }
+  // Temporarily suppressed: Enterprise AIOps Multi-Agent System
+  // {
+  //   id: "aiops-system",
+  //   name: "Enterprise AIOps Multi-Agent System",
+  //   industries: ["IoT", "Cloud Computing", "DevOps/AIOps"],
+  //   icon: Server,
+  //   goal: "To automate the full lifecycle of network operations—from detection to remediation—for a large-scale industrial IoT infrastructure.",
+  //   challenge: "A single AI model cannot simultaneously handle real-time alerting, deep-dive troubleshooting, and predictive analytics without losing context or hallucinating. The system required a team of specialized experts, not a generalist chatbot.",
+  //   solution: {
+  //     description: "I architected a complex Multi-Agent System using TypeScript and the Model Context Protocol (MCP). This system utilizes a hierarchical 'Swarm' architecture where a Supervisor Agent orchestrates five specialized sub-agents:",
+  //     agents: [
+  //       { name: "Troubleshooting Agent", description: "Investigates error logs and diagnostics to root-cause device failures." },
+  //       { name: "Management Agent", description: "Executes configuration updates and firmware patches via secure API tools." },
+  //       { name: "Analytics Agent", description: "Aggregates network health metrics to report on uptime and signal quality." },
+  //       { name: "Alerting Agent", description: "Monitors real-time streams to escalate critical incidents to human staff." },
+  //       { name: "AIOps Agent", description: "Uses predictive logic to identify anomalies before they become outages." }
+  //     ]
+  //   },
+  //   technologies: ["TypeScript", "Model Context Protocol", "Hierarchical Swarm Architecture", "Custom MCP Server"],
+  //   outcome: "A fully autonomous operations team in software form, capable of resolving Tier-1 network issues without human intervention."
+  // }
 ];
 
 const Portfolio = () => {
